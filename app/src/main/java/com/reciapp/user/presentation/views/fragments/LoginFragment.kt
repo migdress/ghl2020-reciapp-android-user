@@ -52,6 +52,10 @@ class LoginFragment : Fragment() {
     private fun initListeners() {
         tieUserName.addTextChangedListener(textWatcher)
         tieUserPassword.addTextChangedListener(textWatcher)
+
+        btnLogin.setOnClickListener {
+
+        }
     }
 
     fun checkFieldsForEmptyValues() {
