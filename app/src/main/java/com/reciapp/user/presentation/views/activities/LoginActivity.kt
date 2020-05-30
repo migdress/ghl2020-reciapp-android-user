@@ -17,4 +17,6 @@ class LoginActivity : AppCompatActivity() {
         findNavController(R.id.fraNavigationLogin)
             .setGraph(R.navigation.login_nav_graph, intent.extras)
     }
+
+    override fun onBackPressed() {}
 }
