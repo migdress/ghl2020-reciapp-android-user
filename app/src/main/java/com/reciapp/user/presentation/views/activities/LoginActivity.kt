@@ -1,4 +1,4 @@
-package com.reciapp.user.presentation.views
+package com.reciapp.user.presentation.views.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
