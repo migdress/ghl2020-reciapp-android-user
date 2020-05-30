@@ -24,7 +24,7 @@ class SplashFragment : Fragment() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 } finally {
-                    findNavController().navigate(R.id.fraNavigationLogin)
+                    findNavController().navigate(R.id.loginFragment)
                 }
             }
         }
