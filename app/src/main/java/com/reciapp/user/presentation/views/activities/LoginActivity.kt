@@ -1,7 +1,7 @@
 package com.reciapp.user.presentation.views.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.reciapp.user.R
 
