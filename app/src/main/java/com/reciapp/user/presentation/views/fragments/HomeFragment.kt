@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.reciapp.user.R
 import com.reciapp.user.presentation.adapters.RecycleTypeAdapter
-import com.reciapp.user.presentation.di.adaptersModule
 import com.reciapp.user.presentation.states.OpenShiftState
 import com.reciapp.user.presentation.states.ShiftState
 import com.reciapp.user.presentation.viewModels.OpenShiftViewModel
