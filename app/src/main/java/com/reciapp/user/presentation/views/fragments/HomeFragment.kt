@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initObservers()
-        //initListeners()
+        initListeners()
 
         recycleTypeViewModel.getRecycleTypes()
         openShiftViewModel.getOpenShifts()
@@ -67,5 +67,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun initListeners() {
+        btnRequestPickup.setOnClickListener {
+
+        }
     }
 }

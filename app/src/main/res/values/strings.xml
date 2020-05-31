@@ -32,4 +32,7 @@
     <string name="general_metal">Metal</string>
     <string name="general_empty_points">---</string>
     <string name="error_open_shifts_failure">No hemos podido cargar la información correctamente.</string>
+    <string name="title_pickup_congratulations">Felicitaciones, solicitud de recogida exitosa!!</string>
+    <string name="btn_end">Terminar</string>
+    <string name="general_picker_day">UN RECOLECTOR PASARÁ EL DÍA</string>
 </resources>

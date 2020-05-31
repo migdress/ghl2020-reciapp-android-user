@@ -9,11 +9,15 @@
         android:id="@+id/nav_home"
         android:name="com.reciapp.user.presentation.views.fragments.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_pickup"
+            app:destination="@id/nav_pickup" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.reciapp.user.presentation.views.activities.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_pickup"
+        android:name="com.reciapp.user.presentation.views.fragments.PickupFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_pickup" />
 </navigation>
