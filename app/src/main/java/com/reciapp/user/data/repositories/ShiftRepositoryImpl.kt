@@ -13,4 +13,6 @@ class ShiftRepositoryImpl(
     override fun saveShiftInformation(shiftId: String) {
         shiftPreferences.shiftId = shiftId
     }
+
+    override fun getShiftId() = shiftPreferences.shiftId
 }

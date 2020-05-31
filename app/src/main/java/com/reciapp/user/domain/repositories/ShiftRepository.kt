@@ -6,4 +6,6 @@ package com.reciapp.user.domain.repositories
 interface ShiftRepository {
 
     fun saveShiftInformation(shiftId: String)
+
+    fun getShiftId(): String
 }
