@@ -2,14 +2,14 @@ package com.reciapp.user.data.repositories
 
 import com.reciapp.user.data.models.login.LoginResponse
 import com.reciapp.user.data.preferences.UserPreferences
-import com.reciapp.user.domain.repositories.LoginLocalRepository
+import com.reciapp.user.domain.repositories.UserRepository
 
 /**
  * Created by Jorge Henao on 30/05/20.
  */
-class LoginLocalRepositoryImpl(
+class UserRepositoryImpl(
     private val userPreferences: UserPreferences
-) : LoginLocalRepository {
+) : UserRepository {
 
     override fun saveUserInfo(loginResponse: LoginResponse) {
         userPreferences.apply {

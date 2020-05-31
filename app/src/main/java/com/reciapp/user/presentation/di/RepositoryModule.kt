@@ -1,8 +1,8 @@
 package com.reciapp.user.presentation.di
 
-import com.reciapp.user.data.repositories.LoginLocalRepositoryImpl
+import com.reciapp.user.data.repositories.UserRepositoryImpl
 import com.reciapp.user.data.repositories.LoginRemoteRepositoryImpl
-import com.reciapp.user.domain.repositories.LoginLocalRepository
+import com.reciapp.user.domain.repositories.UserRepository
 import com.reciapp.user.domain.repositories.LoginRemoteRepository
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -18,8 +18,8 @@ val repositoryModule: Module = module {
         )
     }
 
-    factory<LoginLocalRepository> {
-        LoginLocalRepositoryImpl(
+    factory<UserRepository> {
+        UserRepositoryImpl(
             userPreferences = get()
         )
     }

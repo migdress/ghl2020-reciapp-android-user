@@ -2,7 +2,7 @@ package com.reciapp.user.domain.useCases
 
 import com.reciapp.user.data.models.login.LoginRequest
 import com.reciapp.user.domain.repositories.LoginRemoteRepository
-import com.reciapp.user.domain.repositories.LoginLocalRepository
+import com.reciapp.user.domain.repositories.UserRepository
 import io.reactivex.Completable
 
 /**
@@ -10,7 +10,7 @@ import io.reactivex.Completable
  */
 class LoginUC(
     private val loginCloudRepository: LoginRemoteRepository,
-    private val loginLocalRepository: LoginLocalRepository
+    private val loginLocalRepository: UserRepository
 ) {
 
     /**

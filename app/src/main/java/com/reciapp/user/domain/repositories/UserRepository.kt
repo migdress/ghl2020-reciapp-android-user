@@ -5,7 +5,7 @@ import com.reciapp.user.data.models.login.LoginResponse
 /**
  * Created by Jorge Henao on 30/05/20.
  */
-interface LoginLocalRepository {
+interface UserRepository {
 
     fun saveUserInfo(loginResponse: LoginResponse)
 }
