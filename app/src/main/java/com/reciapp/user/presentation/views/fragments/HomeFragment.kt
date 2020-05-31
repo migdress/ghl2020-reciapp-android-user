@@ -12,7 +12,7 @@ import com.reciapp.user.presentation.states.OpenShiftState
 import com.reciapp.user.presentation.viewModels.OpenShiftViewModel
 import com.reciapp.user.presentation.viewModels.RecycleTypeViewModel
 import com.reciapp.user.utils.viewExtensions.showMessage
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.content_home.*
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 
