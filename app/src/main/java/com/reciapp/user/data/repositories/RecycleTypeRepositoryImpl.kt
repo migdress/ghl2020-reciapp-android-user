@@ -16,11 +16,11 @@ class RecycleTypeRepositoryImpl: RecycleTypeRepository {
         val recycleTypesList = arrayListOf<RecycleType>()
 
         with(recycleTypesList){
-            add(RecycleType(R.drawable.ic_paperboard, R.string.general_paperboard))
-            add(RecycleType(R.drawable.ic_plastic, R.string.general_plastic))
-            add(RecycleType(R.drawable.ic_glass, R.string.general_glass))
-            add(RecycleType(R.drawable.ic_glass, R.string.general_technology))
-            add(RecycleType(R.drawable.ic_glass, R.string.general_metal))
+            add(RecycleType(R.drawable.ic_paperboard, R.string.general_paperboard, false))
+            add(RecycleType(R.drawable.ic_plastic, R.string.general_plastic, false))
+            add(RecycleType(R.drawable.ic_glass, R.string.general_glass, false))
+            add(RecycleType(R.drawable.ic_glass, R.string.general_technology, false))
+            add(RecycleType(R.drawable.ic_glass, R.string.general_metal, false))
         }
 
         return recycleTypesList

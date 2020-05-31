@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         recycleTypeViewModel.getRecycleTypeLiveData.observe(viewLifecycleOwner, Observer {
             rcvRecyclerTypes.adapter = recycleTypeAdapter
             rcvRecyclerTypes.setHasFixedSize(true)
-            recycleTypeAdapter.setData(it)
+            recycleTypeAdapter.setTypes(it)
         })
     }
 

@@ -2,15 +2,18 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/size_100dp"
+    android:id="@+id/cvItemRecycleType"
+    android:layout_width="@dimen/size_110dp"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/size_12dp"
+    android:layout_margin="@dimen/size_10dp"
+    app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="@dimen/size_4dp"
     app:cardElevation="@dimen/elevation_4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackgroundBorderless"
         android:padding="@dimen/size_8dp">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -18,11 +21,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_16dp"
+            app:layout_constraintBottom_toTopOf="@id/txvRecycleDescription"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/txvRecycleDescription"
             tools:src="@tools:sample/avatars"
             tools:visibility="visible" />
 
@@ -30,14 +33,24 @@
             android:id="@+id/txvRecycleDescription"
             android:layout_width="@dimen/size_0dp"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:layout_marginTop="@dimen/size_16dp"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imvRecycleIcon"
             tools:text="@android:string/selectTextMode" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/colorPrimaryDark"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_check" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
