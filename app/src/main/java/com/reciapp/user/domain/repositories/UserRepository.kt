@@ -10,4 +10,6 @@ interface UserRepository {
     fun saveUserInfo(loginResponse: LoginResponse)
 
     fun getUserId(): String
+
+    fun getLocationId(): String
 }

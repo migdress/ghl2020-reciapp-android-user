@@ -22,4 +22,6 @@ class UserRepositoryImpl(
     }
 
     override fun getUserId() = userPreferences.id
+
+    override fun getLocationId() = userPreferences.locationId
 }

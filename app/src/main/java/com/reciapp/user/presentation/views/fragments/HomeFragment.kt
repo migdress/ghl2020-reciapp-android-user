@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.reciapp.user.R
 import com.reciapp.user.presentation.adapters.RecycleTypeAdapter
+import com.reciapp.user.presentation.di.adaptersModule
 import com.reciapp.user.presentation.states.OpenShiftState
 import com.reciapp.user.presentation.viewModels.OpenShiftViewModel
 import com.reciapp.user.presentation.viewModels.RecycleTypeViewModel

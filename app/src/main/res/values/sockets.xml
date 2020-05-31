@@ -2,5 +2,6 @@
 <resources>
     <string name="login_base_url">https://login.reciapp.quartrino.com/</string>
     <string name="score_base_url">https://pin-picking-point.reciapp.quartrino.com/</string>
+    <string name="picking_base_url">https://pin-picking-point.reciapp.quartrino.com/</string>
     <string name="open_shifts_base_url">https://get-open-shifts.reciapp.quartrino.com/</string>
 </resources>

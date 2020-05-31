@@ -25,7 +25,7 @@ class RecycleTypeRepositoryImpl : RecycleTypeRepository {
 
         return recycleTypesList
     }
-    
+
     companion object{
         const val PAPER = "paper"
         const val PLASTIC = "plastic"
