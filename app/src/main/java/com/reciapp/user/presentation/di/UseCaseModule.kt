@@ -2,7 +2,7 @@ package com.reciapp.user.presentation.di
 
 import com.reciapp.user.domain.repositories.UserRepository
 import com.reciapp.user.domain.useCases.LoginUC
-import com.reciapp.user.domain.useCases.PointsUC
+import com.reciapp.user.domain.useCases.ScoreUC
 import com.reciapp.user.domain.useCases.RecycleTypeUC
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -18,8 +18,8 @@ val useCasesModule: Module = module {
         )
     }
     factory {
-        PointsUC(
-            pointsRemoteRepository = get(),
+        ScoreUC(
+            scoreRemoteRepository = get(),
             getUserId = get<UserRepository>()::getUserId
         )
     }

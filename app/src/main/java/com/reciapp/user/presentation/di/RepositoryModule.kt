@@ -2,11 +2,11 @@ package com.reciapp.user.presentation.di
 
 import com.reciapp.user.data.repositories.UserRepositoryImpl
 import com.reciapp.user.data.repositories.LoginRemoteRepositoryImpl
-import com.reciapp.user.data.repositories.PointsRemoteRepositoryImpl
+import com.reciapp.user.data.repositories.ScoreRemoteRepositoryImpl
 import com.reciapp.user.data.repositories.RecycleTypeRepositoryImpl
 import com.reciapp.user.domain.repositories.UserRepository
 import com.reciapp.user.domain.repositories.LoginRemoteRepository
-import com.reciapp.user.domain.repositories.PointsRemoteRepository
+import com.reciapp.user.domain.repositories.ScoreRemoteRepository
 import com.reciapp.user.domain.repositories.RecycleTypeRepository
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -32,9 +32,9 @@ val repositoryModule: Module = module {
         RecycleTypeRepositoryImpl()
     }
 
-    factory<PointsRemoteRepository> {
-        PointsRemoteRepositoryImpl(
-            pointsApi = get()
+    factory<ScoreRemoteRepository> {
+        ScoreRemoteRepositoryImpl(
+            scoreApi = get()
         )
     }
 }

@@ -2,7 +2,7 @@ package com.reciapp.user.presentation.di
 
 import androidx.lifecycle.MutableLiveData
 import com.reciapp.user.presentation.viewModels.LoginViewModel
-import com.reciapp.user.presentation.viewModels.PointsViewModel
+import com.reciapp.user.presentation.viewModels.ScoreViewModel
 import com.reciapp.user.presentation.viewModels.RecycleTypeViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
@@ -25,8 +25,8 @@ val viewModelModule: Module = module {
         )
     }
     viewModel {
-        PointsViewModel(
-            pointsUC = get(),
+        ScoreViewModel(
+            scoreUC = get(),
             pointsLiveData = MutableLiveData()
         )
     }

@@ -8,8 +8,8 @@ import retrofit2.http.Path
 /**
  * Created by Jorge Henao on 31/05/20.
  */
-interface PointsApi {
+interface ScoreApi {
 
     @GET("v1/{user_id}")
-    fun getUserPoints(@Path("user_id") userId: String): Single<UserPointsResponse>
+    fun getUserScore(@Path("user_id") userId: String): Single<UserPointsResponse>
 }

@@ -9,8 +9,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.reciapp.user.R
-import com.reciapp.user.presentation.states.PointsState
-import com.reciapp.user.presentation.viewModels.PointsViewModel
+import com.reciapp.user.presentation.states.ScoreState
+import com.reciapp.user.presentation.viewModels.ScoreViewModel
 import com.reciapp.user.utils.viewExtensions.visible
 import kotlinx.android.synthetic.main.activity_recycle.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -18,7 +18,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class RecycleActivity : AppCompatActivity() {
 
-    private val pointsViewModel: PointsViewModel by viewModel()
+    private val scoreViewModel: ScoreViewModel by viewModel()
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -29,25 +29,25 @@ class RecycleActivity : AppCompatActivity() {
         setToolbar()
         initObservers()
 
-        pointsViewModel.getUserPoints()
+        scoreViewModel.getUserScore()
     }
 
     private fun initObservers() {
-        pointsViewModel.getPointsLiveData.observe(this, Observer {
+        scoreViewModel.getScoreLiveData.observe(this, Observer {
             renderPointState(it)
         })
     }
 
-    private fun renderPointState(pointState: PointsState) {
+    private fun renderPointState(pointState: ScoreState) {
         when (pointState) {
-            is PointsState.Success -> {
+            is ScoreState.Success -> {
                 clpNavLoader.hide()
                 txvPointsValue.apply {
                     visible()
                     text = pointState.points.toString()
                 }
             }
-            is PointsState.Failure -> {
+            is ScoreState.Failure -> {
                 clpNavLoader.hide()
                 txvPointsValue.apply {
                     visible()
