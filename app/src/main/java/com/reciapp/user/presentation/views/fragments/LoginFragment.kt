@@ -7,10 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import com.reciapp.user.R
+import com.reciapp.user.presentation.states.LoginState
+import com.reciapp.user.presentation.viewModels.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
+
+    private val loginViewModel: LoginViewModel by viewModel()
 
     private val textWatcher: TextWatcher = object : TextWatcher {
         override fun beforeTextChanged(
@@ -47,6 +53,13 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initListeners()
+        initObservers()
+    }
+
+    private fun initObservers() {
+        loginViewModel.getLoginLiveData.observe(viewLifecycleOwner, Observer {
+            renderLoginState(it)
+        })
     }
 
     private fun initListeners() {
@@ -54,13 +67,26 @@ class LoginFragment : Fragment() {
         tieUserPassword.addTextChangedListener(textWatcher)
 
         btnLogin.setOnClickListener {
-
+            loginViewModel.login(tieUserName.text.toString(), tieUserPassword.text.toString())
         }
     }
 
+    /**
+     * Enable or disable the Login button
+     */
     fun checkFieldsForEmptyValues() {
         val user: String = tieUserName.text.toString()
         val password: String = tieUserPassword.text.toString()
         btnLogin.isEnabled = !(user.isEmpty() || password.isEmpty())
+    }
+
+    private fun renderLoginState(loginState: LoginState) {
+        when (loginState) {
+            is LoginState.Loading -> {
+
+            }
+            is LoginState.Success -> showConnectionFailure(getString(state.resource))
+            is LoginState.Failure -> showConnectionFailure(state.message)
+        }
     }
 }
