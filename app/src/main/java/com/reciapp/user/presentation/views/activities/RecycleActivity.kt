@@ -6,8 +6,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.reciapp.user.R
 import com.reciapp.user.presentation.states.ScoreState
 import com.reciapp.user.presentation.viewModels.ScoreViewModel
@@ -58,22 +56,25 @@ class RecycleActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
+        val navController = findNavController(R.id.fraNavigationRecycle)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     private fun setToolbar() {
         setSupportActionBar(toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment)
+        findNavController(R.id.fraNavigationLogin)
+            .setGraph(R.navigation.recycle_nav_graph, intent.extras)
+
+        /*val navController = findNavController(R.id.nav_host_fragment)
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery
+                R.id.nav_home, R.id.nav_pickup
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        navView.setupWithNavController(navController)*/
 
         toolbar.title = ""
     }

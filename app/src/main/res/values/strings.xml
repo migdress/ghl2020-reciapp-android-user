@@ -35,4 +35,5 @@
     <string name="title_pickup_congratulations">Felicitaciones, solicitud de recogida exitosa!!</string>
     <string name="btn_end">Terminar</string>
     <string name="general_picker_day">UN RECOLECTOR PASARÁ EL DÍA</string>
+    <string name="error_shift_failure">No hemos podido crear tu solicitud, vuelve a intentarlo</string>
 </resources>

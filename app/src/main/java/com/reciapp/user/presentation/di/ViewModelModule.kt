@@ -5,6 +5,7 @@ import com.reciapp.user.presentation.viewModels.LoginViewModel
 import com.reciapp.user.presentation.viewModels.OpenShiftViewModel
 import com.reciapp.user.presentation.viewModels.RecycleTypeViewModel
 import com.reciapp.user.presentation.viewModels.ScoreViewModel
+import com.reciapp.user.presentation.viewModels.ShiftViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -35,6 +36,12 @@ val viewModelModule: Module = module {
         OpenShiftViewModel(
             openShiftUC = get(),
             openShiftLiveData = MutableLiveData()
+        )
+    }
+    viewModel {
+        ShiftViewModel(
+            shiftUC = get(),
+            shiftLiveData = MutableLiveData()
         )
     }
 }
