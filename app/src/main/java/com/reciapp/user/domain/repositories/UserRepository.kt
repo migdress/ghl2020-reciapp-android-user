@@ -8,4 +8,6 @@ import com.reciapp.user.data.models.login.LoginResponse
 interface UserRepository {
 
     fun saveUserInfo(loginResponse: LoginResponse)
+
+    fun getUserId(): String
 }

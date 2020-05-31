@@ -19,4 +19,6 @@ class UserRepositoryImpl(
             type = loginResponse.type
         }
     }
+
+    override fun getUserId() = userPreferences.id
 }
