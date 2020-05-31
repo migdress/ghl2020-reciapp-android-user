@@ -1,5 +1,6 @@
 package com.reciapp.user.presentation.views.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,8 @@ import com.reciapp.user.presentation.states.ShiftState
 import com.reciapp.user.presentation.viewModels.OpenShiftViewModel
 import com.reciapp.user.presentation.viewModels.RecycleTypeViewModel
 import com.reciapp.user.presentation.viewModels.ShiftViewModel
+import com.reciapp.user.presentation.views.activities.PickupActivity
+import com.reciapp.user.presentation.views.activities.RecycleActivity
 import com.reciapp.user.utils.viewExtensions.hide
 import com.reciapp.user.utils.viewExtensions.showMessage
 import com.reciapp.user.utils.viewExtensions.visible
@@ -70,7 +73,11 @@ class HomeFragment : Fragment() {
                 cnlLoadingContent.visible()
             }
             is ShiftState.Success -> {
-                findNavController().navigate(R.id.nav_pickup)
+                startActivity(Intent(activity, PickupActivity::class.java).apply {
+                    putExtra(PickupActivity.PICKER_DATE, txvPickupDateValue.text.toString())
+                    putExtra(PickupActivity.PICKER_HOUR, txvNextDateValue.text.toString())
+                })
+
                 cnlLoadingContent.hide()
                 cnlHomeContent.visible()
             }
