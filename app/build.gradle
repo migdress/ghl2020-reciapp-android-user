@@ -21,6 +21,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
@@ -64,6 +71,10 @@ dependencies {
     implementation "org.koin:koin-core:$koin.core"
     implementation "org.koin:koin-android:$koin.android"
     implementation "org.koin:koin-android-viewmodel:$koin.android_viewmodel"
+
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     //Testing
     testImplementation "org.mockito:mockito-core:$mockito.core"

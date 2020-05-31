@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/splash_logo" />
+            app:srcCompat="@drawable/ic_principal_logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -143,6 +143,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/img_recycling_arrow" />
+        app:srcCompat="@drawable/ic_recycling_arrow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

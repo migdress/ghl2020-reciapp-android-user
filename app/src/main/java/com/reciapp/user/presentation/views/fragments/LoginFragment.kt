@@ -1,5 +1,6 @@
 package com.reciapp.user.presentation.views.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,6 +12,7 @@ import androidx.lifecycle.Observer
 import com.reciapp.user.R
 import com.reciapp.user.presentation.states.LoginState
 import com.reciapp.user.presentation.viewModels.LoginViewModel
+import com.reciapp.user.presentation.views.activities.RecycleActivity
 import com.reciapp.user.utils.viewExtensions.hide
 import com.reciapp.user.utils.viewExtensions.hideKeyboardFrom
 import com.reciapp.user.utils.viewExtensions.showMessage
@@ -94,7 +96,8 @@ class LoginFragment : Fragment() {
                 cnlLoadingContent.visible()
             }
             is LoginState.Success -> {
-                showMessage("Login exitoso")
+                startActivity(Intent(activity, RecycleActivity::class.java))
+                requireActivity().finish()
             }
             is LoginState.Failure -> {
                 cnlLoadingContent.hide()
