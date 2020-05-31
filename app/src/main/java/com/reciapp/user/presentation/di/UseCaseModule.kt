@@ -10,7 +10,8 @@ import org.koin.dsl.module
 val useCasesModule: Module = module {
     factory {
         LoginUC(
-            loginCloudRepository = get()
+            loginCloudRepository = get(),
+            userRepository = get()
         )
     }
 }

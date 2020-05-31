@@ -10,7 +10,7 @@ import io.reactivex.Completable
  */
 class LoginUC(
     private val loginCloudRepository: LoginRemoteRepository,
-    private val loginLocalRepository: UserRepository
+    private val userRepository: UserRepository
 ) {
 
     /**
@@ -20,7 +20,7 @@ class LoginUC(
         return loginCloudRepository.login(LoginRequest(username, password))
             .flatMapCompletable { loginResponse ->
                 //almacenar informacion
-                loginLocalRepository.saveUserInfo(loginResponse)
+                userRepository.saveUserInfo(loginResponse)
                 Completable.complete()
             }
     }

@@ -2,6 +2,7 @@ package com.reciapp.user.app
 
 import android.app.Application
 import com.reciapp.user.presentation.di.apiModule
+import com.reciapp.user.presentation.di.preferencesModule
 import com.reciapp.user.presentation.di.repositoryModule
 import com.reciapp.user.presentation.di.useCasesModule
 import com.reciapp.user.presentation.di.viewModelModule
@@ -28,6 +29,7 @@ class AppController: Application() {
             modules(
                 listOf(
                     apiModule,
+                    preferencesModule,
                     repositoryModule,
                     useCasesModule,
                     viewModelModule
