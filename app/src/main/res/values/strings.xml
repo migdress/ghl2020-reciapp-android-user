@@ -31,4 +31,5 @@
     <string name="general_technology">Tenología</string>
     <string name="general_metal">Metal</string>
     <string name="general_empty_points">---</string>
+    <string name="error_open_shifts_failure">No hemos podido cargar la información correctamente.</string>
 </resources>

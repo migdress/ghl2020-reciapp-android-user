@@ -1,14 +1,25 @@
 package com.reciapp.user.presentation.views.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.reciapp.user.R
 import com.reciapp.user.presentation.adapters.RecycleTypeAdapter
+import com.reciapp.user.presentation.states.LoginState
+import com.reciapp.user.presentation.states.OpenShiftState
+import com.reciapp.user.presentation.viewModels.OpenShiftViewModel
 import com.reciapp.user.presentation.viewModels.RecycleTypeViewModel
+import com.reciapp.user.presentation.views.activities.RecycleActivity
+import com.reciapp.user.utils.viewExtensions.hide
+import com.reciapp.user.utils.viewExtensions.showMessage
+import com.reciapp.user.utils.viewExtensions.visible
+import kotlinx.android.synthetic.main.content_login.*
+import kotlinx.android.synthetic.main.content_waiting.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -16,6 +27,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class HomeFragment : Fragment() {
 
     private val recycleTypeViewModel: RecycleTypeViewModel by viewModel()
+    private val openShiftViewModel: OpenShiftViewModel by viewModel()
     private val recycleTypeAdapter: RecycleTypeAdapter by inject()
 
     override fun onCreateView(
@@ -33,6 +45,7 @@ class HomeFragment : Fragment() {
         //initListeners()
 
         recycleTypeViewModel.getRecycleTypes()
+        openShiftViewModel.getOpenShifts()
     }
 
     private fun initObservers() {
@@ -41,6 +54,24 @@ class HomeFragment : Fragment() {
             rcvRecyclerTypes.setHasFixedSize(true)
             recycleTypeAdapter.setTypes(it)
         })
+
+        openShiftViewModel.getOpenShiftLiveData.observe(viewLifecycleOwner, Observer {
+            renderOpenShiftState(it)
+        })
+    }
+
+    private fun renderOpenShiftState(openShiftState: OpenShiftState) {
+        when (openShiftState) {
+            is OpenShiftState.Success -> {
+                with(openShiftState.openShiftsResponse.shifts[0]){
+                    txvPickupDateValue.text = formattedDate
+                    txvNextDateValue.text = shift
+                }
+            }
+            is OpenShiftState.Failure -> {
+                showMessage(getString(R.string.error_open_shifts_failure))
+            }
+        }
     }
 
     private fun initListeners() {
