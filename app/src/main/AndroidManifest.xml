@@ -14,7 +14,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".presentation.views.activities.RecycleActivity"
-            android:label=""
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
