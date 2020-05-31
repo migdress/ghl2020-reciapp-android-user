@@ -2,8 +2,9 @@ package com.reciapp.user.presentation.di
 
 import androidx.lifecycle.MutableLiveData
 import com.reciapp.user.presentation.viewModels.LoginViewModel
-import com.reciapp.user.presentation.viewModels.ScoreViewModel
+import com.reciapp.user.presentation.viewModels.OpenShiftViewModel
 import com.reciapp.user.presentation.viewModels.RecycleTypeViewModel
+import com.reciapp.user.presentation.viewModels.ScoreViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -28,6 +29,12 @@ val viewModelModule: Module = module {
         ScoreViewModel(
             scoreUC = get(),
             pointsLiveData = MutableLiveData()
+        )
+    }
+    viewModel {
+        OpenShiftViewModel(
+            openShiftUC = get(),
+            openShiftLiveData = MutableLiveData()
         )
     }
 }

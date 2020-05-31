@@ -2,6 +2,7 @@ package com.reciapp.user.presentation.di
 
 import com.reciapp.user.R
 import com.reciapp.user.data.networkeEndPoints.LoginApi
+import com.reciapp.user.data.networkeEndPoints.OpenShiftsApi
 import com.reciapp.user.data.networkeEndPoints.ScoreApi
 import com.reciapp.user.utils.network.ManagerNetwork
 import org.koin.android.ext.koin.androidContext
@@ -21,7 +22,13 @@ val apiModule: Module = module {
 
     factory {
         ManagerNetwork().getRetrofitInstance(
-            androidContext().resources.getString(R.string.points_base_url)
+            androidContext().resources.getString(R.string.score_base_url)
         ).create(ScoreApi::class.java)
+    }
+
+    factory {
+        ManagerNetwork().getRetrofitInstance(
+            androidContext().resources.getString(R.string.open_shifts_base_url)
+        ).create(OpenShiftsApi::class.java)
     }
 }

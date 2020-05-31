@@ -1,13 +1,15 @@
 package com.reciapp.user.presentation.di
 
-import com.reciapp.user.data.repositories.UserRepositoryImpl
 import com.reciapp.user.data.repositories.LoginRemoteRepositoryImpl
-import com.reciapp.user.data.repositories.ScoreRemoteRepositoryImpl
+import com.reciapp.user.data.repositories.OpenShiftRemoteRepositoryImpl
 import com.reciapp.user.data.repositories.RecycleTypeRepositoryImpl
-import com.reciapp.user.domain.repositories.UserRepository
+import com.reciapp.user.data.repositories.ScoreRemoteRepositoryImpl
+import com.reciapp.user.data.repositories.UserRepositoryImpl
 import com.reciapp.user.domain.repositories.LoginRemoteRepository
-import com.reciapp.user.domain.repositories.ScoreRemoteRepository
+import com.reciapp.user.domain.repositories.OpenShiftRemoteRepository
 import com.reciapp.user.domain.repositories.RecycleTypeRepository
+import com.reciapp.user.domain.repositories.ScoreRemoteRepository
+import com.reciapp.user.domain.repositories.UserRepository
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
@@ -35,6 +37,12 @@ val repositoryModule: Module = module {
     factory<ScoreRemoteRepository> {
         ScoreRemoteRepositoryImpl(
             scoreApi = get()
+        )
+    }
+
+    factory<OpenShiftRemoteRepository> {
+        OpenShiftRemoteRepositoryImpl(
+            openShiftsApi = get()
         )
     }
 }

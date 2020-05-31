@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.reciapp.user.domain.useCases.ScoreUC
 import com.reciapp.user.presentation.states.ScoreState
+import com.reciapp.user.utils.applySchedulers
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -21,8 +22,7 @@ class ScoreViewModel(
     fun getUserScore() {
         addDisposable(
             scoreUC.getUserScore()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                .applySchedulers()
                 .subscribe({
                     pointsLiveData.value = ScoreState.Success(it.score)
                 }, {
