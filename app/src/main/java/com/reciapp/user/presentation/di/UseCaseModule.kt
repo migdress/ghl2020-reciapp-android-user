@@ -34,7 +34,8 @@ val useCasesModule: Module = module {
 
     factory {
         OpenShiftUC(
-            openShiftRemoteRepository = get()
+            openShiftRemoteRepository = get(),
+            shiftRepository = get()
         )
     }
 }
