@@ -5,4 +5,5 @@ package com.reciapp.user.utils.preferences
  */
 object NamesPreferences {
     const val USER = "userPreferences"
+    const val SHIFT = "shiftPreferences"
 }

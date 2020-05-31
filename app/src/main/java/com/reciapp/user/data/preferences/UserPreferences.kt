@@ -41,9 +41,8 @@ class UserPreferences(
             preferences[USER_LOCATION_ID] = value
         }
 
-    @SuppressLint("ApplySharedPref")
     fun clear() {
-        preferences.edit().clear().commit()
+        preferences.edit().clear().apply()
     }
 
     companion object {
