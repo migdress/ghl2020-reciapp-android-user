@@ -6,5 +6,6 @@ package com.reciapp.user.data.models.recycleType
 data class RecycleType(
     var icon: Int,
     var description: Int,
-    var isSelected: Boolean
+    var isSelected: Boolean,
+    var materialName: String
 )
