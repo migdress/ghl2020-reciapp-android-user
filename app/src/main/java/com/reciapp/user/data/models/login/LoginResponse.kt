@@ -28,9 +28,9 @@ class LoginResponse(
         val country: String,
         @Json(name = "city")
         val city: String,
-        @Json(name = "address_1")
+        @Json(name = "address1")
         val firstAddress: String,
-        @Json(name = "address_2")
+        @Json(name = "address2")
         val secondAddress: String,
         @Json(name = "latitude")
         val latitude: Double,
