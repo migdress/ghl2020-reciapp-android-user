@@ -19,7 +19,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="@dimen/size_0dp"
         android:layout_height="wrap_content"
-        android:text="@string/information_processing"
+        android:text="@string/general_processing"
         android:textColor="@color/black200"
         android:textAlignment="center"
         android:textSize="@dimen/text_20sp"
