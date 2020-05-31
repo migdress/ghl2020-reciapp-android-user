@@ -2,6 +2,7 @@ package com.reciapp.user.presentation.di
 
 import com.reciapp.user.R
 import com.reciapp.user.data.networkeEndPoints.LoginApi
+import com.reciapp.user.utils.network.ManagerNetwork
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
 import org.koin.dsl.module

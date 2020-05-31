@@ -1,4 +1,4 @@
-package com.reciapp.user.utils
+package com.reciapp.user.utils.network
 
 import okhttp3.Interceptor
 import okhttp3.Response

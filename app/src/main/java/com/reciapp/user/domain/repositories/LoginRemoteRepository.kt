@@ -7,7 +7,7 @@ import io.reactivex.Single
 /**
  * Created by Jorge Henao on 30/05/20.
  */
-interface LoginCloudRepository {
+interface LoginRemoteRepository {
 
     /**
      * Method used to generate the login request

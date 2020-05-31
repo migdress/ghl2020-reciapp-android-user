@@ -2,14 +2,14 @@ package com.reciapp.user.data.repositories
 
 import com.reciapp.user.data.models.login.LoginRequest
 import com.reciapp.user.data.networkeEndPoints.LoginApi
-import com.reciapp.user.domain.repositories.LoginCloudRepository
+import com.reciapp.user.domain.repositories.LoginRemoteRepository
 
 /**
  * Created by Jorge Henao on 30/05/20.
  */
-class LoginCloudRepositoryImpl(
+class LoginRemoteRepositoryImpl(
     private val loginApi: LoginApi
-) : LoginCloudRepository {
+) : LoginRemoteRepository {
 
     /**
      * Method used to generate the login request

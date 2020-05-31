@@ -1,6 +1,5 @@
-package com.reciapp.user.presentation.di
+package com.reciapp.user.utils.network
 
-import com.reciapp.user.utils.LogInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.ConnectionSpec
