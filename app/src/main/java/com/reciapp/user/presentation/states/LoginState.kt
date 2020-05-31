@@ -6,5 +6,5 @@ package com.reciapp.user.presentation.states
 sealed class LoginState {
     object Loading : LoginState()
     object Success : LoginState()
-    object ErrorReturnMessage : LoginState()
+    object Failure : LoginState()
 }
