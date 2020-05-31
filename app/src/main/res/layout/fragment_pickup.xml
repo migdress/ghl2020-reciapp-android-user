@@ -92,7 +92,8 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/imvAccount"
-                    app:layout_constraintTop_toBottomOf="@id/txvPickerDay" />
+                    app:layout_constraintTop_toBottomOf="@id/txvPickerDay"
+                    tools:text="VIERNES 29 DE MAYO"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/txvPickerHour"
@@ -103,7 +104,8 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/imvAccount"
-                    app:layout_constraintTop_toBottomOf="@id/txvPickerDate" />
+                    app:layout_constraintTop_toBottomOf="@id/txvPickerDate"
+                    tools:text="09:00 am - 10:00 am" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
