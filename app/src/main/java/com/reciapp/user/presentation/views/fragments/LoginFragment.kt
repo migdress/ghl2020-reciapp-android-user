@@ -1,20 +1,18 @@
 package com.reciapp.user.presentation.views.fragments
 
-import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.reciapp.user.R
 import com.reciapp.user.presentation.states.LoginState
 import com.reciapp.user.presentation.viewModels.LoginViewModel
-import com.reciapp.user.utils.viewExtensions.gone
+import com.reciapp.user.utils.viewExtensions.hide
+import com.reciapp.user.utils.viewExtensions.hideKeyboardFrom
 import com.reciapp.user.utils.viewExtensions.showMessage
 import com.reciapp.user.utils.viewExtensions.visible
 import kotlinx.android.synthetic.main.content_login.*
@@ -74,6 +72,8 @@ class LoginFragment : Fragment() {
         tieUserPassword.addTextChangedListener(textWatcher)
 
         btnLogin.setOnClickListener {
+            hideKeyboardFrom()
+
             loginViewModel.login(tieUserName.text.toString(), tieUserPassword.text.toString())
         }
     }
@@ -90,14 +90,14 @@ class LoginFragment : Fragment() {
     private fun renderLoginState(loginState: LoginState) {
         when (loginState) {
             is LoginState.Loading -> {
-                cnlBodyContent.gone()
+                cnlBodyContent.hide()
                 cnlLoadingContent.visible()
             }
             is LoginState.Success -> {
                 showMessage("Login exitoso")
             }
             is LoginState.Failure -> {
-                cnlLoadingContent.gone()
+                cnlLoadingContent.hide()
                 cnlBodyContent.visible()
                 showMessage(getString(R.string.error_login_failure))
             }

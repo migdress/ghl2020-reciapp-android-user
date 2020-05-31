@@ -9,6 +9,6 @@ fun View.visible() {
     this.visibility = View.VISIBLE
 }
 
-fun View.gone() {
+fun View.hide() {
     this.visibility = View.GONE
 }
