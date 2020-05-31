@@ -11,7 +11,11 @@ import androidx.lifecycle.Observer
 import com.reciapp.user.R
 import com.reciapp.user.presentation.states.LoginState
 import com.reciapp.user.presentation.viewModels.LoginViewModel
-import kotlinx.android.synthetic.main.fragment_login.*
+import com.reciapp.user.utils.viewExtensions.gone
+import com.reciapp.user.utils.viewExtensions.showMessage
+import com.reciapp.user.utils.viewExtensions.visible
+import kotlinx.android.synthetic.main.content_login.*
+import kotlinx.android.synthetic.main.content_waiting.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
@@ -83,10 +87,17 @@ class LoginFragment : Fragment() {
     private fun renderLoginState(loginState: LoginState) {
         when (loginState) {
             is LoginState.Loading -> {
-
+                cnlBodyContent.gone()
+                cnlLoadingContent.visible()
             }
-            is LoginState.Success -> showConnectionFailure(getString(state.resource))
-            is LoginState.Failure -> showConnectionFailure(state.message)
+            is LoginState.Success -> {
+                showMessage("Login exitoso")
+            }
+            is LoginState.Failure -> {
+                cnlLoadingContent.gone()
+                cnlBodyContent.visible()
+                showMessage(getString(R.string.error_login_failure))
+            }
         }
     }
 }
