@@ -35,6 +35,12 @@ class UserPreferences(
             preferences[USER_TYPE] = value
         }
 
+    var locationId: String
+        get() = preferences[USER_LOCATION_ID, String()] ?: String()
+        set(value) {
+            preferences[USER_LOCATION_ID] = value
+        }
+
     @SuppressLint("ApplySharedPref")
     fun clear() {
         preferences.edit().clear().commit()
@@ -45,5 +51,6 @@ class UserPreferences(
         const val USER_FIRST_NAME = "user_first_name"
         const val USER_LAST_NAME = "user_last_name"
         const val USER_TYPE = "user_type"
+        const val USER_LOCATION_ID = "user_location_id"
     }
 }

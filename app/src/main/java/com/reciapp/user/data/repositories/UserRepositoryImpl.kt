@@ -17,6 +17,7 @@ class UserRepositoryImpl(
             firstName = loginResponse.firstName
             lastName = loginResponse.lastName
             type = loginResponse.type
+            locationId = loginResponse.locations[0].id
         }
     }
 
