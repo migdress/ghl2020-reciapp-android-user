@@ -25,4 +25,9 @@
     <string name="general_pickup_time">HORA DE RECOGIDA</string>
     <string name="general_select_your_recycling">Seleccione su reciclaje</string>
     <string name="btn_request_pickup">Solicitar Recogida</string>
+    <string name="general_paperboard">Cartón</string>
+    <string name="general_plastic">Plástico</string>
+    <string name="general_glass">Vidrio</string>
+    <string name="general_technology">Tenología</string>
+    <string name="general_metal">Metal</string>
 </resources>

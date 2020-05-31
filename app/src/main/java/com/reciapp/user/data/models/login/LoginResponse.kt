@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 /**
  * Created by Jorge Henao on 30/05/20.
  */
-class LoginResponse(
+data class LoginResponse(
     @Json(name = "id")
     val id: String,
     @Json(name = "firstname")

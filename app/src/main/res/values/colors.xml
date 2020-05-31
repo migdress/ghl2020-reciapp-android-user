@@ -3,10 +3,10 @@
     <color name="colorPrimary">#2e7d32</color>
     <color name="colorPrimaryDark">#005005</color>
     <color name="colorAccent">#60ad5e</color>
-    <color name="colorPrimaryLigth">#c8e6c9</color>
 
     <color name="black100">#F5F5F5</color>
     <color name="black200">#B3B3B3</color>
     <color name="black500">#666666</color>
     <color name="black900">#212121</color>
+    <color name="colorPrimaryLight">#E2EEE1</color>
 </resources>

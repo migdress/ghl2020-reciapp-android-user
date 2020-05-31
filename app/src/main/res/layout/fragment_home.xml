@@ -118,7 +118,7 @@
         android:layout_width="@dimen/size_0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size_40dp"
-        android:background="@color/colorPrimaryLigth"
+        android:background="@color/colorPrimaryLight"
         android:padding="@dimen/size_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,7 +152,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="@dimen/size_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size_40dp"
+        android:layout_marginTop="@dimen/size_32dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toStartOf="@+id/dlEnd"

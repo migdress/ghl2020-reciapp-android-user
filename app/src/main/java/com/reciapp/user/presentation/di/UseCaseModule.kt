@@ -1,6 +1,7 @@
 package com.reciapp.user.presentation.di
 
 import com.reciapp.user.domain.useCases.LoginUC
+import com.reciapp.user.domain.useCases.RecycleTypeUC
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
@@ -12,6 +13,11 @@ val useCasesModule: Module = module {
         LoginUC(
             loginCloudRepository = get(),
             userRepository = get()
+        )
+    }
+    factory {
+        RecycleTypeUC(
+            recycleTypeRepository = get()
         )
     }
 }
