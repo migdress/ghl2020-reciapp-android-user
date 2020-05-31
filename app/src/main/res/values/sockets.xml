@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="login_base_url">https://login.reciapp.quartrino.com/</string>
+    <string name="points_base_url">https://pin-picking-point.reciapp.quartrino.com/</string>
 </resources>
