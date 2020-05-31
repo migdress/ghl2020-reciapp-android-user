@@ -164,8 +164,7 @@
         android:layout_width="@dimen/size_0dp"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:elevation="@dimen/size_4dp"
-        android:padding="@dimen/size_16dp"
+        android:elevation="@dimen/size_16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -173,6 +172,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnRequestPickup"
             style="@style/AppTheme.ButtonPrimary"
+            android:layout_margin="@dimen/size_16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn_request_pickup"/>
