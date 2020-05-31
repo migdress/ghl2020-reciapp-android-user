@@ -21,7 +21,7 @@ class LoginViewModel(
     /**
      * Method used to control the login request with the view
      */
-    fun login(userName: String, password: String){
+    fun login(userName: String, password: String) {
         addDisposable(loginUC.login(userName, password)
             .doOnSubscribe {
                 loginLiveData.postValue(LoginState.Loading)
@@ -30,8 +30,9 @@ class LoginViewModel(
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 loginLiveData.value = LoginState.Success
-            },{
+            }, {
                 loginLiveData.value = LoginState.Failure
-            }))
+            })
+        )
     }
 }

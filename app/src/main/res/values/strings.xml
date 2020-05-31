@@ -30,4 +30,5 @@
     <string name="general_glass">Vidrio</string>
     <string name="general_technology">Tenología</string>
     <string name="general_metal">Metal</string>
+    <string name="general_empty_points">---</string>
 </resources>

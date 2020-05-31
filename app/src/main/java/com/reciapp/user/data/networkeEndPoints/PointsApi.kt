@@ -10,6 +10,6 @@ import retrofit2.http.Path
  */
 interface PointsApi {
 
-    @GET("v1")
+    @GET("v1/{user_id}")
     fun getUserPoints(@Path("user_id") userId: String): Single<UserPointsResponse>
 }
