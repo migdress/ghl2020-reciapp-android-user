@@ -9,5 +9,8 @@ class RecycleTypeUC(
     private val recycleTypeRepository: RecycleTypeRepository
 ) {
 
+    /**
+     * Method used to get the recycle types available
+     */
     fun getRecycleTypes() = recycleTypeRepository.getRecycleTypes()
 }
