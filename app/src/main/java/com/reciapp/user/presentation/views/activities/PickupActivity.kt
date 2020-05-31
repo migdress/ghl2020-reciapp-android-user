@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.reciapp.user.R
@@ -22,6 +23,7 @@ class PickupActivity : AppCompatActivity() {
 
     private fun initListeners() {
         btnPickupEnd.setOnClickListener {
+            Toast.makeText(this, getString(R.string.general_thanks_for_your_request), Toast.LENGTH_LONG).show()
             onBackPressed()
         }
     }

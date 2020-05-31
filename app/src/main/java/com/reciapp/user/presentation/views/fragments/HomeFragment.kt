@@ -45,6 +45,10 @@ class HomeFragment : Fragment() {
 
         initObservers()
         initListeners()
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         recycleTypeViewModel.getRecycleTypes()
         openShiftViewModel.getOpenShifts()

@@ -20,7 +20,6 @@
             android:name=".presentation.views.activities.PickupActivity"
             android:parentActivityName=".presentation.views.activities.RecycleActivity"
             android:screenOrientation="portrait"
-
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".presentation.views.activities.LoginActivity"
