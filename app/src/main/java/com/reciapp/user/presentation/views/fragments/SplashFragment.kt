@@ -13,7 +13,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
-private const val TIMER_THREAD = 2500L
+private const val TIMER_THREAD = 3L
 
 class SplashFragment : Fragment() {
 
